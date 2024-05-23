@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
+use App\Http\Resources\EvaluationResource;
 use Illuminate\Http\Request;
 use App\Models\Evaluation;
 
@@ -19,8 +21,10 @@ class EvaluationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($company)
     {
-        //
+        $evaluations = $this->evaluation->where('company', $company)->get();
+
+        return EvaluationResource::collection($evaluations);
     }
 }
