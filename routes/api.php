@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\{
 };
 
 Route::get('/evaluations/{company}', [EvaluationController::class, 'index']);
+Route::post('/evaluations/{company}', [EvaluationController::class, 'store']);
 
 Route::get('/' , function(){
     return response()->json(['message' => 'sucesso micro02']);

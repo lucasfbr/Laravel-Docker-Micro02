@@ -9,5 +9,8 @@ class Evaluation extends Model
 {
     use HasFactory;
 
-    protected $filable = ['company','comment','stars'];
+    protected $fillable = ['company', 'comment', 'stars'];
+
+
+
 }
