@@ -35,6 +35,7 @@ class EvaluationController extends Controller
     public function store(StoreEvaluation $request, $company){
 
         $response = $this->companyService->getCompany($company);
+
         $status = $response->status();
         if($status != 200) {
             return response()->json([
