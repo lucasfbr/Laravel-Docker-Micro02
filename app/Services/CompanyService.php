@@ -2,11 +2,11 @@
 
 namespace App\Services;
 
-use App\Services\Traits\ConsumerExternalService;
+use RogerioPereira\EspecializatiMicroserviceCommon\Services\Traits\ConsumeExternalService;
 
 class CompanyService  
 {
-    use ConsumerExternalService;
+    use ConsumeExternalService;
 
     protected $token;
     protected $url;
